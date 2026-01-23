@@ -52,10 +52,21 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
         rel="stylesheet">
 
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Font Awesome for Icons (Non-blocking) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </noscript>
 
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Preload Hero Image for LCP -->
+    <link rel="preload" as="image"
+        href="https://sazndrewoskxdnbrjvnz.supabase.co/storage/v1/object/public/fotos/Portada.JPG">
+
+    <!-- Defer Main Script -->
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -72,7 +83,7 @@
         </div>
         <div class="hero-content">
             <div class="hero-logo" id="heroLogo">
-                <img src="Logo_blanco.svg" alt="Goldenwoods School Logo">
+                <img src="Logo_blanco.svg" alt="Goldenwoods School Logo" width="200" height="200" fetchpriority="high">
             </div>
             <h1 class="hero-title">
                 <span class="title-highlight">Inscripciones Abiertas</span>
@@ -228,7 +239,7 @@
                 <div class="offering-card" data-level="preescolar">
                     <div class="card-image">
                         <img src="https://sazndrewoskxdnbrjvnz.supabase.co/storage/v1/object/public/fotos/GoldenWoods_Preescolar.jpg"
-                            alt="Preescolar Goldenwoods" loading="lazy">
+                            alt="Preescolar Goldenwoods" loading="lazy" width="400" height="300">
                         <div class="card-overlay">
                             <div class="card-icon">🎨</div>
                         </div>
@@ -250,7 +261,7 @@
                 <div class="offering-card" data-level="special-english">
                     <div class="card-image">
                         <img src="https://sazndrewoskxdnbrjvnz.supabase.co/storage/v1/object/public/fotos/GoldenWoods_Special.jpg"
-                            alt="Special English Goldenwoods" loading="lazy">
+                            alt="Special English Goldenwoods" loading="lazy" width="400" height="300">
                         <div class="card-overlay">
                             <div class="card-icon">🌍</div>
                         </div>
@@ -271,7 +282,7 @@
                 <div class="offering-card" data-level="primaria">
                     <div class="card-image">
                         <img src="https://sazndrewoskxdnbrjvnz.supabase.co/storage/v1/object/public/fotos/GoldenWoods_Primaria.jpg"
-                            alt="Primaria Goldenwoods" loading="lazy">
+                            alt="Primaria Goldenwoods" loading="lazy" width="400" height="300">
                         <div class="card-overlay">
                             <div class="card-icon">📚</div>
                         </div>
@@ -292,7 +303,7 @@
                 <div class="offering-card" data-level="secundaria">
                     <div class="card-image">
                         <img src="https://sazndrewoskxdnbrjvnz.supabase.co/storage/v1/object/public/fotos/GoldenWoods_Secundaria.jpg"
-                            alt="Secundaria Goldenwoods" loading="lazy">
+                            alt="Secundaria Goldenwoods" loading="lazy" width="400" height="300">
                         <div class="card-overlay">
                             <div class="card-icon">🎓</div>
                         </div>
@@ -453,7 +464,7 @@
             <div class="unoi-content">
                 <div class="unoi-logo">
                     <img src="https://sazndrewoskxdnbrjvnz.supabase.co/storage/v1/object/public/fotos/Unoi.png"
-                        alt="Sistema UNOi Logo">
+                        alt="Sistema UNOi Logo" loading="lazy" width="300" height="200">
                 </div>
                 <div class="unoi-text">
                     <p class="unoi-question">¿Estás listo para que tus hijos abandonen los métodos del pasado y se
@@ -561,7 +572,6 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
 </body>
 
 </html>
