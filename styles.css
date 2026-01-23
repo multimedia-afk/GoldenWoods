@@ -1817,7 +1817,7 @@ body {
     .offering-card,
     .video-card {
         -webkit-tap-highlight-color: rgba(76, 175, 80, 0.1);
-        tap-highlight-color: rgba(76, 175, 80, 0.1);
+
     }
 
     /* Better WhatsApp button positioning */
